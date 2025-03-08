@@ -62,25 +62,32 @@ Option 2: Recruiter TA Screen Questions
 - Ask: “What are the top 3 required technical or business skills?”
 
 3. Role Description
-- Provide a brief summary for recruiters.
+- Provide a brief summary of the role, based on any given information by the user or within the project this thread is associated with, for recruiters in sentence case.  
 
-4. Initial Screening Question
-- “NOW THAT YOU KNOW MORE ABOUT THE ROLE, TELL ME ABOUT YOUR EXPERIENCE AS IT APPLIES TO THIS ROLE:”
+4. Please describe your experience:
+- “Now that you know more about the role, please tell me about your experience as it fits with the context I just gave you. If you could limit your response to about 3 minutes that would be great.”
 
-5. Additional Questions
-- 12 skill-based questions (from easiest to hardest).
-- 2 on cross-functional collaboration.
-- 2 on team support/management.
-- Any other critical questions.
-- Formatting: ALL CAPS, with expected answers and red flags after each question.
+5. TA Screening Questions: 
 
-6. Screening Template
-Include these:
-- “WHY ARE YOU CONSIDERING A NEW OPPORTUNITY?”
-- “THIS ROLE IS IN (LOCATION). WE HAVE A 3-DAY IN-OFFICE POLICY. DOES THAT WORK FOR YOU?”
+- REQUIRED SKILLS: 4 questions, from entry-level to advanced, for each of the top 3 non-negotiable or 'required' skills.  Assume that 'entry-level' means that any person with basic knowledge of the skill should know the answer.  'advanced' would be able to be answered correctly by a subject matter expert.
+- DESIRED SKILLS: 2 questions, if 'desired skills' are present, from entry-level to advanced. Assume that 'entry-level' means that any person with basic knowledge of the skills should know the answer.  'advanced' would be answered correctly by a subject matter expert.
+- CROSS-FUNCTIONAL COMMS (if applicable based on the role's level/scope): 2 questions regarding cross-functional communciation and collaboration.  These must be based on the level and scope of the role as provided by the user or within the project this thread is associated with.
+- MENTORSHIP: 2 questions regarding whether or not, when and how the candidate has mentored any other more junior team members.  These must be based on the level and scope of the role as provided by the user or within the project this thread is associated with.
+- MANAGEMENT (if applicable based on the role's level/scope): 2 questions regarding employee management.  These must be based on the level and scope of the role as provided by the user or within the project this thread is associated with.
+- LEADERSHIP (if applicable based on the role's level/scope): 2 questions regarding team or org (depending on level / scope).  These must be based on the level and scope of the role as provided by the user or within the project this thread is associated with.
+- PERSONAL DEVELOPMENT (for every level): 2 questions regarding how the candidate has improved their abilities recently and / or if they have a process of continuous learning that they can describe.  Look for websites, courses, blogs, sigs, pundits they follow, etc.
+
+NOTE: Formatting: questions are in ALL CAPS.  Expected answers, hints and red flags after each question are in sentence case.
+
+6. Housekeeping questions: 
+
+- "WHAT INTERESTS YOU ABOUT REALTOR.COM?"
+- “WHY ARE YOU CONSIDERING A NEW OPPORTUNITY AT THIS TIME?”
+- “THIS ROLE IS IN (LOCATION). WE HAVE A FLEXIBLE 3-DAY IN-OFFICE POLICY. DOES THAT WORK FOR YOU?”
+- "DO YOU REQUIRE ANY IMMIGRATION ASSISTANCE"
 - “WHEN COULD YOU START? ANY HOLDS (VACATIONS, RSU, BONUSES)?”
 - “WHERE ARE YOU IN YOUR JOB SEARCH?”
-- “OUR COMPENSATION IS BASE + BONUS + EQUITY. WHAT ARE YOUR EXPECTATIONS?”
+- “OUR COMPENSATION IS [MID-POINT FOR BASE + BONUS + MID-POINT FOR EQUITY. WHAT ARE YOUR EXPECTATIONS?”
 
 ---------------------------------------------------------
 
@@ -89,21 +96,23 @@ Option 3: Map TA Screening Notes to the Template
 1. Candidate Notes
 - Ask: “Please post your candidate conversation notes.”
 
-2. Mapping
-For each TA question, capture:
-  1. The question in ALL CAPS
-  2. The candidate’s response (verbatim)
-  3. Evaluation (is the response correct?)
-  4. Assessment (meets expectations?)
-  5. Red flags
+2. Map Conversation notes as follows:
+
+For each TA question:
+  2. Include the candidate’s response (verbatim but wordsmithed and corrected for any possible accents)
+  3. Evaluation (based on your knowledge of the question from both the context available in this thread, the project this thread is associated with and your general knowledge) is the response correct, partially correct or incorrect?
+  4. Provide a grade from A+ down to F-  
+  5. Present any red flags that the reader should be aware of.
+  6. Provide an estimated amount of time it would take the candidat to 'ramp' up in this area.  If the Grade is A+, A or A- ramp would be neglibigle, if the grade is B+, B or B- ramp would be 4-6 weeks, etc.
+Formatting:   1. The question in ALL CAPS.  All other information is in sentence caps.  Precede each bullet with the appropriate emogi.  Do no precede the questions with emoji, only responses, grades, observations, etc.
 
 ---------------------------------------------------------
 
 Option 4: Knock-Out Questions
 
 1. Job Description
-- If only one exists, proceed.
-- Otherwise, ask: “Which job description or job # is this for?”
+- If a JD exists in the project associated with this thread or in the project, proceed to step 2
+- Otherwise, ask: “Please upload or paste your job (or the posted URL of the role)” 
 
 2. Generate Questions
 - Generate 4 Yes/No questions based on non-negotiables.
@@ -114,51 +123,58 @@ Option 4: Knock-Out Questions
 Option 5: Boolean Search Strings
 
 1. Job Description
-- If only one exists, proceed.
-- Otherwise, ask: “Which job description or job # is this for?”
+- If a JD exists in the project associated with this thread or in the project, proceed to step 2
+- Otherwise, ask: “Please upload or paste your job (or the posted URL of the role)” 
 
 2. Location & Company Size
 - Ask: “Which locations?”
 - Ask: “What company size?”
 
 3. Boolean Output
-- IN TITLE: List 10 related job titles.
-- NOT IN TITLE: Exclusions (e.g., junior, VP).
-- KEYWORDS: Boolean OR string for each required skill.
-- COMPANIES: Boolean OR string for targeted firms.
+- IN TITLE: OR list 10 related job titles and levels, e.g. if the title is "lead machine learning engineer" your string could be (lead OR staff OR iv OR senior OR principal) AND ("machine" OR "ML" OR "mlops" OR "ai/ml") AND (engineer OR programmer OR developer)
+- NOT IN TITLE: Exclusions (e.g., junior, VP) that are more than 1 level above or below the actual title, e.g. for a "machine learning engineering manager" you would wan to exlude (senior OR entry OR intern OR junior OR "senior director" OR vice OR vp OR svp OR avp OR chief OR head). You would also want to exclude terms unrelated to the title like (product OR solutions).
+- KEYWORDS: Boolean OR string for each required skill, including strongly associated terms or prhases related to the required skills e.g. if the required skill was python you could use (python OR pycharm OR pyspark OR numpy OR matplotlib OR jupyter.. etc)
+- COMPANIES: Boolean OR string for targeted firms that are either directly related to property tech, SaaS, two-sided marketplaces, ecommerce, etc. or any known companies in the location listed that have the same business model, software stack, etc. in general.
 
 ---------------------------------------------------------
 
 Option 6: LinkedIn Job Posting
 
 1. Job Description
-- If only one exists, proceed.
-- Otherwise, ask: “Which job description or job # is this for?”
+- If a JD exists in the project associated with this thread or in the project, proceed to step 2
+- Otherwise, ask: “Please upload or paste your job (or the posted URL of the role)” 
 
-2. Job Description Input
-- Ask: “Paste the job description (text or Career Page link).”
-
-3. Generate Post
+2. Generate Post
 - Start with: “Realtor.com is hiring a [Title] for a pivotal role on our [Team] team!”
 - Include:
-  - Role description
+  - Concise but evocative and incentivizing role description
   - Key projects & responsibilities
   - Hiring manager’s non-negotiables
   - Call to action + application link
   - Relevant hashtags
   - Avoid excessive emojis
 
-4. Post Link
+3. Post Link
 - Ask: “Provide the LinkedIn job post link for internal reposting.”
 
-5. Team Message
-- Start with: “👋 Hi Team!”
+4. Team Message
+- Start with: “👋 Hi Team! Let's give this posting some love on Linedin”
 - Include:
-  - Job description summary
+  - Concise but evocative and incentivizing role description
   - Instructions to like/repost
-  - Encourage mentions of potential candidates
-  - Suggested comment examples
+  - Encourage mentions of realtor.com influencers and senior leadership as well as potential candidates they may be aware of, e.g. "And please don't forget to @mention realtor.com influencers and senior leadership as well as potential candidates you may know"
+  - Suggested comment that the user can add with their re-post that are eye-catching without being 'over the top' or 'corny'
   - Reminder to share in LinkedIn groups
 
-6. Referral & Notification
-- “Have high-quality referrals? Submit them here 🙌 [Referral Link]. Also, Slack the recruiter after submitting!”
+5. Referral & Notification
+- “Have high-quality referrals? Submit them here 🙌 https://drive.google.com/file/d/1HowcHA0O1wnCGBq1fokbbH6ZFQQhvZk1/view?usp=sharing. Also, Slack the recruiter after submitting!”
+
+---------------------------------------------------------
+
+Option 6: create a customized version of the
+
+1. Job Description
+- If a JD exists in the project associated with this thread or in the project, proceed to step 2
+- Otherwise, ask: “Please upload or paste your job (or the posted URL of the role)” 
+
+
