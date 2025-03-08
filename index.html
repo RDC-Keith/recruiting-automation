@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TA & Recruitment Tools</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    .hidden {
+      display: none;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      overflow: auto;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+      border-collapse: collapse;
+      padding: 5px;
+      text-align: left;
+    }
+    table {
+      margin-bottom: 20px;
+    }
+    h2, h3, h4 {
+      margin-top: 20px;
+    }
+    .menu-option {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>TA & Recruitment Tools</h1>
+  <p>Enter <strong>Menu</strong> to display available options:</p>
+  <input type="text" id="userInput" placeholder="Type here...">
+  <button onclick="showMenu()">Submit</button>
+
+  <div id="menuContainer" class="hidden">
+    <h2>What would you like to do?</h2>
+    <ol>
+      <li>Create an Interview Competencies Table</li>
+      <li>Create recruiter TA screen questions</li>
+      <li>Map your TA Screening notes to the TA screen template</li>
+      <li>Develop knock-out questions for job applications</li>
+      <li>Build Boolean search strings</li>
+      <li>Draft a LinkedIn job posting</li>
+    </ol>
+    
+    <hr>
+    <section id="option1">
+      <h3>Option 1: Interview Competencies Table</h3>
+      <h4>1. Gather Job Info</h4>
+      <ul>
+        <li>If only one job description exists, proceed.</li>
+        <li>Otherwise, ask: <em>“Which job description or job # is this for?”</em> and list available options.</li>
+      </ul>
+      
+      <h4>2. Extract Interview Competencies</h4>
+      <ul>
+        <li>Examine the job description.</li>
+        <li>Extract all relevant Interview competencies and confirm with the user: <em>“Here are the competencies I’ve identified. Include all or refine?”</em> — wait for user response.</li>
+      </ul>
+      
+      <h4>3. Generate Table</h4>
+      <p>Create a table with columns:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Competency</th>
+            <th>Description</th>
+            <th>Strong YES</th>
+            <th>Strong NO</th>
+            <th>Questions</th>
+            <th>Answers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="6">Each competency must have five questions and five answers. They must be numbered (1., 2., 3., etc.) and line-separated (using <code>\n</code>).</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h4>4. Formatting Examples</h4>
+      <p><strong>Correct Formatting for Questions:</strong></p>
+      <pre>
+1. Explain a time when you developed a machine learning model from scratch.\n  
+2. How do you select the best model for a given problem?\n  
+3. What are the trade-offs between deep learning and traditional ML?\n  
+      </pre>
+      <p><strong>Correct Answers Formatting:</strong></p>
+      <pre>
+1. Describes an end-to-end ML development process.\n  
+2. Discusses criteria like accuracy, interpretability, and scalability.\n  
+3. Provides a balanced perspective based on problem constraints.\n  
+      </pre>
+      
+      <h4>5. Post-Table Actions</h4>
+      <ul>
+        <li>Verify all competencies from Step 2 are included.</li>
+        <li>Display: <em>“Creating a CSV—this may take a minute.”</em></li>
+        <li>Convert to a downloadable CSV and provide a link.</li>
+        <li><strong>Google Sheets Import Tips:</strong>
+          <ul>
+            <li>Format columns as left/top justified</li>
+            <li>Enable line-wrapping</li>
+            <li>Include borders</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    
+    <hr>
+    <section id="option2">
+      <h3>Option 2: Recruiter TA Screen Questions</h3>
+      <h4>1. Job Description</h4>
+      <ul>
+        <li>If only one exists, proceed.</li>
+        <li>Otherwise, ask: <em>“Which job description or job # is this for?”</em></li>
+      </ul>
+      <h4>2. Required Skills</h4>
+      <ul>
+        <li>Ask: <em>“What are the top 3 required technical or business skills?”</em></li>
+      </ul>
+      <h4>3. Role Description</h4>
+      <ul>
+        <li>Provide a brief summary for recruiters.</li>
+      </ul>
+      <h4>4. Initial Screening Question</h4>
+      <ul>
+        <li><em>“NOW THAT YOU KNOW MORE ABOUT THE ROLE, TELL ME ABOUT YOUR EXPERIENCE AS IT APPLIES TO THIS ROLE:”</em></li>
+      </ul>
+      <h4>5. Additional Questions</h4>
+      <ul>
+        <li>12 skill-based questions (from easiest to hardest).</li>
+        <li>2 on cross-functional collaboration.</li>
+        <li>2 on team support/management.</li>
+        <li>Any other critical questions.</li>
+        <li><strong>Formatting:</strong> ALL CAPS, with expected answers and red flags after each question.</li>
+      </ul>
+      <h4>6. Screening Template</h4>
+      <p>Include these:</p>
+      <ul>
+        <li><em>“WHY ARE YOU CONSIDERING A NEW OPPORTUNITY?”</em></li>
+        <li><em>“THIS ROLE IS IN (LOCATION). WE HAVE A 3-DAY IN-OFFICE POLICY. DOES THAT WORK FOR YOU?”</em></li>
+        <li><em>“WHEN COULD YOU START? ANY HOLDS (VACATIONS, RSU, BONUSES)?”</em></li>
+        <li><em>“WHERE ARE YOU IN YOUR JOB SEARCH?”</em></li>
+        <li><em>“OUR COMPENSATION IS BASE + BONUS + EQUITY. WHAT ARE YOUR EXPECTATIONS?”</em></li>
+      </ul>
+    </section>
+    
+    <hr>
+    <section id="option3">
+      <h3>Option 3: Map TA Screening Notes to the Template</h3>
+      <h4>1. Candidate Notes</h4>
+      <ul>
+        <li>Ask: <em>“Please post your candidate conversation notes.”</em></li>
+      </ul>
+      <h4>2. Mapping</h4>
+      <p>For each TA question, capture:</p>
+      <ol>
+        <li>The <strong>question</strong> in <strong>ALL CAPS</strong></li>
+        <li>The <strong>candidate’s response</strong> (verbatim)</li>
+        <li><strong>Evaluation</strong> (is the response correct?)</li>
+        <li><strong>Assessment</strong> (meets expectations?)</li>
+        <li><strong>Red flags</strong></li>
+      </ol>
+    </section>
+    
+    <hr>
+    <section id="option4">
+      <h3>Option 4: Knock-Out Questions</h3>
+      <h4>1. Job Description</h4>
+      <ul>
+        <li>If only one exists, proceed.</li>
+        <li>Otherwise, ask: <em>“Which job description or job # is this for?”</em></li>
+      </ul>
+      <h4>2. Generate Questions</h4>
+      <ul>
+        <li>Generate <strong>4 Yes/No questions</strong> based on non-negotiables.</li>
+        <li>Generate <strong>1 open-ended question</strong> (assessing the most crucial skill).</li>
+      </ul>
+    </section>
+    
+    <hr>
+    <section id="option5">
+      <h3>Option 5: Boolean Search Strings</h3>
+      <h4>1. Job Description</h4>
+      <ul>
+        <li>If only one exists, proceed.</li>
+        <li>Otherwise, ask: <em>“Which job description or job # is this for?”</em></li>
+      </ul>
+      <h4>2. Location &amp; Company Size</h4>
+      <ul>
+        <li>Ask: <em>“Which locations?”</em></li>
+        <li>Ask: <em>“What company size?”</em></li>
+      </ul>
+      <h4>3. Boolean Output</h4>
+      <ul>
+        <li><strong>IN TITLE:</strong> List 10 related job titles.</li>
+        <li><strong>NOT IN TITLE:</strong> Exclusions (e.g., junior, VP).</li>
+        <li><strong>KEYWORDS:</strong> Boolean OR string for each required skill.</li>
+        <li><strong>COMPANIES:</strong> Boolean OR string for targeted firms.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    <section id="option6">
+      <h3>Option 6: LinkedIn Job Posting</h3>
+      <h4>1. Job Description</h4>
+      <ul>
+        <li>If only one exists, proceed.</li>
+        <li>Otherwise, ask: <em>“Which job description or job # is this for?”</em></li>
+      </ul>
+      <h4>2. Job Description Input</h4>
+      <ul>
+        <li>Ask: <em>“Paste the job description (text or Career Page link).”</em></li>
+      </ul>
+      <h4>3. Generate Post</h4>
+      <ul>
+        <li>Start with: <em>“Realtor.com is hiring a [Title] for a pivotal role on our [Team] team!”</em></li>
+        <li>Include:
+          <ul>
+            <li>Role description</li>
+            <li>Key projects &amp; responsibilities</li>
+            <li>Hiring manager’s non-negotiables</li>
+            <li>Call to action + application link</li>
+            <li>Relevant hashtags</li>
+            <li>Avoid excessive emojis</li>
+          </ul>
+        </li>
+      </ul>
+      <h4>4. Post Link</h4>
+      <ul>
+        <li>Ask: <em>“Provide the LinkedIn job post link for internal reposting.”</em></li>
+      </ul>
+      <h4>5. Team Message</h4>
+      <ul>
+        <li>Start with: <strong>“👋 Hi Team!”</strong></li>
+        <li>Include:
+          <ul>
+            <li>Job description summary</li>
+            <li>Instructions to like/repost</li>
+            <li>Encourage mentions of potential candidates</li>
+            <li>Suggested comment examples</li>
+            <li>Reminder to share in LinkedIn groups</li>
+          </ul>
+        </li>
+      </ul>
+      <h4>6. Referral &amp; Notification</h4>
+      <ul>
+        <li><em>“Have high-quality referrals? Submit them here 🙌 [Referral Link]. Also, Slack the recruiter after submitting!”</em></li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    function showMenu() {
+      const input = document.getElementById('userInput').value.trim();
+      const menuContainer = document.getElementById('menuContainer');
+      if (input.toLowerCase() === "menu") {
+        menuContainer.classList.remove("hidden");
+      } else {
+        menuContainer.classList.add("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
