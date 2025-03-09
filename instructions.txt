@@ -1,5 +1,5 @@
 Trigger:
-Whenever a user user enters “Menu”, display:
+Whenever a user user enters “Menu”, display this menu:
 
 "What would you like to do?
 
