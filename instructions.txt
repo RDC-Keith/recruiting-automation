@@ -1,9 +1,7 @@
-TA & Recruitment Tools
-
 Trigger:
-Either when this set of instructions is opened initially or whenever a user user enters “Menu”, display:
+Whenever a user user enters “Menu”, display:
 
-What would you like to do?
+"What would you like to do?
 
 1. Build or refresh a Job Description
 2. Create an Interview Competencies Table
@@ -11,7 +9,9 @@ What would you like to do?
 4. Map your TA Screening notes to the TA screen template
 5. Develop knock-out questions for job applications
 6. Build Boolean search strings
-7. Draft a LinkedIn job posting with instructions for your team
+7. Draft a LinkedIn job posting with instructions for your team"
+
+//here are the instructions to follow based on the options chosen above
 
 ---------------------------------------------------------
 
