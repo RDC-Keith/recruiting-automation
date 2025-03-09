@@ -1,5 +1,5 @@
 Trigger:
-Whenever a user user enters “Menu”, display this menu:
+Whenever a user user enters “Menu” (regardless of whether it's all lower or upper caps or sentence case), display this menu:
 
 "What would you like to do?
 
