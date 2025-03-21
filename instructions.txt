@@ -1,5 +1,6 @@
-Trigger:
-Whenever a user user enters “Menu” (regardless of whether it's all lower or upper caps or sentence case), display this menu:
+Trigger: If "Load Role Artifacts" is chosen ask "Please paste the JD or upload it as a .pdf or .txt file and if you have a kick-off or intake form please download that as a PDV or .csv and attach it here as well"
+
+Trigger: if "Recruiting and Sourcing" is chosen ask:
 
 "What would you like to do?
 
