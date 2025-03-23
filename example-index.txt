@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{{job_title}} @ {{company_name}}</title>
+  <link rel="icon" href="{{favicon_url}}" type="image/x-icon">
+  <style>
+    /* (CSS stays the same as original) */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="{{logo_image}}" alt="{{company_name}} Logo" class="responsive-image">
+    <center><h1><strong>{{job_title}}</strong></h1></center>
+    <p>{{job_summary}}</p>
+
+    <details>
+      <summary>🔍 SCOPE OF THE ROLE</summary>
+      <h4>Initial Responsibilities</h4>
+      <p>{{initial_responsibilities}}</p>
+      <h4>Potential for Growth</h4>
+      <p>{{growth_opportunities}}</p>
+    </details>
+
+    <details>
+      <summary>🌟 JOIN AND COLLABORATE WITH BEST-IN-CLASS TEAMS</summary>
+      <p>{{team_benefits}}</p>
+    </details>
+
+    <details>
+      <summary>🤝 SHAPE CAREERS WHILE DRIVING INNOVATION</summary>
+      <p>{{leadership_summary}}</p>
+    </details>
+
+    <details>
+      <summary>🛠️ WORK WITH CUTTING-EDGE TOOLS AND PROJECTS</summary>
+      <h4>Projects</h4>
+      <p>{{project_list}}</p>
+
+      <h4>Tools & Stack</h4>
+      <p>{{tool_stack}}</p>
+    </details>
+
+    <details>
+      <summary>✨ FLEXIBILITY MEETS A THRIVING CULTURE</summary>
+      <p>{{work_culture}}</p>
+    </details>
+
+    <details>
+      <summary>🙋🏻‍♂️ REPORTING STRUCTURE</summary>
+      <h4>Who You Report To</h4>
+      <p>This role reports directly to <a href="{{hiring_manager_linkedin}}">{{hiring_manager_name}}</a>.</p>
+      <p>{{reporting_summary}}</p>
+
+      <h4>Why It Matters</h4>
+      <p>{{reporting_importance}}</p>
+    </details>
+    
+    <details>
+      <summary>📋 NEXT STEPS: INTERVIEW TO OFFER PROCESS</summary>
+      <p>{{interview_process}}</p>
+    </details>
+
+    <hr>
+    <h3>Ready to Make an Impact?</h3>
+    <p>
+      Book a <a href="{{calendly_30min}}">30 Minute</a> or <a href="{{calendly_15min}}">15 Minute</a> ☕ chat.
+    </p>
+    <p>
+      <strong>{{recruiter_name}}</strong><br>
+      {{recruiter_title}}<br>
+      {{recruiter_phone}}<br>
+      <a href="mailto:{{recruiter_email}}">{{recruiter_email_display}}</a><br>
+      <a href="{{recruiter_linkedin}}">LinkedIn</a>
+    </p>
+  </div>
+</body>
+</html>
